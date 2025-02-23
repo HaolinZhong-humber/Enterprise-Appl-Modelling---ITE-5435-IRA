@@ -1,0 +1,40 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Company</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Meal Preference</th>
+            <th>Payment Mode</th>
+            <th>Cheque Number</th>
+            <th>Bank Name</th>
+            <th>Payable At</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="registration : ${registrations}">
+            <td th:text="${registration.id}"></td>
+            <td th:text="${registration.firstName}"></td>
+            <td th:text="${registration.lastName}"></td>
+            <td th:text="${registration.company}"></td>
+            <td th:text="${registration.address}"></td>
+            <td th:text="${registration.city}"></td>
+            <td th:text="${registration.state}"></td>
+            <td th:text="${registration.country}"></td>
+            <td th:text="${registration.email}"></td>
+            <td th:text="${registration.phoneNumber}"></td>
+            <td th:text="${registration.mealPreference}"></td>
+            <td th:text="${#strings.listJoin(registration.paymentModes, ', ')}"></td>
+            <td th:text="${registration.chequeNumber}"></td>
+            <td th:text="${registration.bankName}"></td>
+            <td th:text="${registration.payableAt}"></td>
+        </tr>
+    </tbody>
+</table>

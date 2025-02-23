@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Workshop Registration</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+    <h2>Workshop Registration</h2>
+
+    <form th:action="@{/register/submit}" th:object="${registration}" method="post">
+        <label>First Name:</label>
+        <input type="text" th:field="*{firstName}" required><br>
+
+        <label>Last Name:</label>
+        <input type="text" th:field="*{lastName}" required><br>
+
+        <label>Company/Institution:</label>
+        <input type="text" th:field="*{company}" required><br>
+
+        <label>Address:</label>
+        <textarea th:field="*{address}" required></textarea><br>
+
+        <label>City:</label>
+        <input type="text" th:field="*{city}"><br>
+
+        <label>State/Province/Region:</label>
+        <input type="text" th:field="*{state}"><br>
+
+        <label>Country:</label>
+        <input type="text" th:field="*{country}"><br>
+
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" required><br>
+
+        <label>Phone Number:</label>
+        <input type="text" th:field="*{phoneNumber}" required><br>
+
+        <label>Meal Preference:</label>
+        <select th:field="*{mealPreference}">
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Non-Vegetarian">Non-Vegetarian</option>
+        </select><br>
+
+        <label>Payment Mode:</label><br>
+        <input type="checkbox" th:field="*{paymentModes}" value="Cash"> Cash
+        <input type="checkbox" th:field="*{paymentModes}" value="Cheque"> Cheque
+        <input type="checkbox" th:field="*{paymentModes}" value="Demand Draft"> Demand Draft
+        <br>
+
+        <label>DD/Cheque No.:</label>
+        <input type="text" th:field="*{chequeNumber}"><br>
+
+        <label>Drawn On (Bank Name):</label>
+        <input type="text" th:field="*{bankName}"><br>
+
+        <label>Payable At:</label>
+        <input type="text" th:field="*{payableAt}"><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <p><a th:href="@{/register/list}">View All Registrations</a></p>
+</body>
+</html>
