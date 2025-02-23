@@ -1,0 +1,80 @@
+/* 🌟 页面主容器 */
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* 🌟 让表单整齐 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+/* 🌟 让 label 靠左 */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 🌟 输入框 */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 🌟 按钮样式 */
+button {
+    width: 100%;
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* 🌟 退出按钮（红色） */
+button.danger {
+    background: #dc3545;
+}
+
+button.danger:hover {
+    background: #a71d2a;
+}
+
+/* 🌟 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
