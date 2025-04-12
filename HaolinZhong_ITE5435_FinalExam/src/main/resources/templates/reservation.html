@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reservation Form</title>
+    <style>
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            background:#f2f6fa;
+            margin:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+        .card{
+            background:#fff;
+            border-radius:12px;
+            box-shadow:0 4px 12px rgba(0,0,0,.1);
+            padding:32px 40px;
+            width:420px;
+        }
+        h2{margin-top:0;text-align:center}
+        label{display:block;margin-top:18px;font-weight:bold}
+        input,select{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:6px;
+            margin-top:6px;
+            box-sizing:border-box;
+        }
+        .btn{
+            margin-top:28px;
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:6px;
+            font-weight:bold;
+            font-size:15px;
+            cursor:pointer;
+            background:#0069d9;
+            color:#fff;
+        }
+        .btn:hover{background:#0053b3}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Reservation Form</h2>
+        <form th:action="@{/submit}" method="post">
+            <label>Customer Name
+                <input type="text" name="customerName" required/>
+            </label>
+
+            <label>Flight Number
+                <input type="text" name="flightNumber" required/>
+            </label>
+
+            <label>Amount ($)
+                <input type="number" name="amount" step="0.01" min="0" required/>
+            </label>
+
+            <label>Email
+                <input type="email" name="email"/>
+            </label>
+
+            <label>Phone
+                <input type="text" name="phone"/>
+            </label>
+
+            <label>Payment Method
+                <select name="paymentMethod">
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Cash">Cash</option>
+                </select>
+            </label>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
